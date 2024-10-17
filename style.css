@@ -1,0 +1,94 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 85%);
+    margin: 5vh;
+}
+
+html {
+    font-size: 16px; /* pentru desktop */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    html {
+        font-size: 13px; /* pentru tabletă */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 12px; /* pentru telefoane */
+    }
+    body{
+        margin-top: 15vh;
+    }
+}
+
+#calculator{    
+    background-color: gray;
+    border-radius: 25px;
+    width: 23.5rem;
+    height: fit-content;
+    overflow: hidden;
+}
+
+#display{
+    width: 20.4rem;
+    height: 5rem;
+    border: none;
+    padding: 25px;
+    background-color: hsla(0, 0%, 0%, 0.65);
+    font-size: 3rem;
+    text-align: left;
+    color: whitesmoke;
+}
+
+#key_container{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    justify-items: center; /* centrează butoanele orizontal în grilă */
+    align-items: center; /* centrează butoanele vertical în grilă */
+    padding: 1rem; 
+    width: fit-content;
+    height: fit-content;
+}
+
+#key_container button{
+    margin: 0.3rem;
+}
+
+.right{
+    background-color: hsl(39, 85%, 50%);
+}
+
+.right:hover{
+    background-color: hsl(39, 87%, 38%);
+}
+
+.right:active{
+    transition: none;
+    background-color: hsl(39, 87%, 20%);
+}
+
+button {
+    border-radius: 50px;
+    border: none;
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 2rem;
+    color: whitesmoke;
+    font-weight: bold;
+    background-color: hsl(0, 0%, 22%);
+    transition: 0.25s;
+}
+
+button:hover{
+    background-color: hsl(0, 0%, 35%);
+}
+
+button:active{
+    transition: none;
+    background-color: hsl(0, 0%, 70%);
+}
